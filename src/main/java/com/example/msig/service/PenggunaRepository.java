@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface PenggunaRepository extends JpaRepository<PenggunaEntity, Integer> {
 
-    @Query(value = "select id_pengguna id, nama_pengguna Nama, nomor_telepon NomorTelepon from buku_telepon.pengguna where nama_pengguna like :nama_pengguna",nativeQuery = true)
+    @Query(value = "select id_pengguna id, nama_pengguna Nama, nomor_telepon NomorTelepon from buku_telepon.pengguna where nama_pengguna like :nama_pengguna and is_active = true",nativeQuery = true)
     List<Object[]> findByNama(@Param("nama_pengguna") String nama_pengguna);
 
     boolean existsByNomorTelepon(String nomorTelepon);

@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "e73dad96-2c35-4a57-a40f-798a326169a4",
+		"name": "buku telepon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24688125"
+	},
+	"item": [
+		{
+			"name": "READ All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/pengguna/penggunaAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pengguna",
+						"penggunaAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/pengguna/nov",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pengguna",
+						"nov"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaPengguna\":\"juni nov\",\r\n    \"nomorTelepon\":\"085972572922\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/pengguna/addPengguna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pengguna",
+						"addPengguna"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPengguna\": 6,\r\n    \"namaPengguna\":\"eri jaya\",\r\n    \"nomorTelepon\":\"085972572931\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/pengguna/updatePengguna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pengguna",
+						"updatePengguna"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HARD DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPengguna\" : 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/pengguna/hardDeletePengguna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pengguna",
+						"hardDeletePengguna"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SOFT DELETE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPengguna\": 13\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/pengguna/softDeletePengguna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pengguna",
+						"softDeletePengguna"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
